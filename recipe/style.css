@@ -1,0 +1,127 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Outfit",sans-serif;
+background:hsl(30, 54%, 90%);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+.card{
+background:white;
+max-width:700px;
+border-radius:16px;
+overflow:hidden;
+}
+
+.recipe-img{
+width:100%;
+display:block;
+}
+
+.content{
+padding:40px;
+}
+
+h1{
+font-family:"Young Serif",serif;
+margin-bottom:16px;
+color:hsl(24, 5%, 18%);
+}
+
+.desc{
+color:hsl(30, 10%, 34%);
+margin-bottom:28px;
+}
+
+.prep{
+background:hsl(330, 100%, 98%);
+padding:20px;
+border-radius:10px;
+margin-bottom:28px;
+}
+
+.prep h3{
+color:hsl(332, 51%, 32%);
+margin-bottom:10px;
+}
+
+ul,ol{
+padding-left:20px;
+}
+
+li{
+margin-bottom:8px;
+color:hsl(30, 10%, 34%);
+}
+
+h2{
+font-family:"Young Serif",serif;
+color:hsl(14, 45%, 36%);
+margin:20px 0 10px;
+}
+
+hr{
+border:none;
+border-top:1px solid hsl(30, 18%, 87%);
+margin:28px 0;
+}
+
+.nutrition-desc{
+margin-bottom:20px;
+color:hsl(30, 10%, 34%);
+}
+
+.nutrition{
+width:100%;
+border-collapse:collapse;
+}
+
+.nutrition tr{
+border-bottom:1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition td{
+padding:12px 0;
+color:hsl(30, 10%, 34%);
+}
+
+.value{
+color:hsl(14, 45%, 36%);
+font-weight:600;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0; 
+        background-color: white; 
+    }
+
+    .card {
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    .recipe-img {
+        border-radius: 0;
+    }
+
+    .content {
+        padding: 32px 24px;
+    }
+
+    .nutrition {
+        width: 100%;
+    }
+    
+    .nutrition td {
+        padding: 12px 16px;
+    }
+}
