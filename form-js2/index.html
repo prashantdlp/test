@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Newsletter</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- SIGNUP CARD -->
+    <div class="card signup-card">
+
+      <div class="left">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul>
+          <li><img src="./assets/images/icon-list.svg"> Product discovery and building what matters</li>
+          <li><img src="./assets/images/icon-list.svg"> Measuring to ensure updates are a success</li>
+          <li><img src="./assets/images/icon-list.svg"> And much more!</li>
+        </ul>
+
+        <form id="fr">
+          <div class="label-row">
+            <label for="email">Email address</label>
+            <span class="error">Valid email required</span>
+          </div>
+
+          <input type="text" id="email" name="email" placeholder="email@company.com">
+
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+
+      <div class="right">
+        <img src="./assets/images/illustration-sign-up-desktop.svg">
+      </div>
+
+    </div>
+
+    <!-- SUCCESS CARD -->
+    <div class="card success-card">
+      <img src="./assets/images/icon-success.svg" class="success-icon">
+
+      <h1>Thanks for subscribing!</h1>
+
+      <p>
+        A confirmation email has been sent to 
+        <b>ash@loremcompany.com</b>. Please open it and click the button 
+        inside to confirm your subscription.
+      </p>
+
+      <button onclick=back()>Dismiss message</button>
+    </div>
+
+  </div>
+  <script>
+    const form    = document.getElementById('fr')
+    const signup  = document.querySelector('.signup-card')
+    const success = document.querySelector('.success-card')
+
+    function handleSubmit(e){
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData);
+      console.log(data);
+      // not doing error thing here as my repo my wish
+
+      document.querySelector('.signup-card').style.display = 'none';
+      document.querySelector('.success-card').style.display = 'flex';
+    }
+
+    function back() {
+      document.querySelector('.signup-card').style.display = 'flex';
+      document.querySelector('.success-card').style.display = 'none';
+    }
+
+    form.addEventListener('submit', handleSubmit);
+</script>
+</body>
+</html>
