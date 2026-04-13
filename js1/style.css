@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color:hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family:'Figtree', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: none;
+    border-radius: 12px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px; 
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; 
+}
+
+.imgx { 
+    width:100%; 
+    height: 200px; 
+    border-radius: 12px; 
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+footer.mobile-active{
+  /* display: none; */
+  background-color: hsl(217, 19%, 35%);  
+}
+
+.share-container {
+  position: relative; 
+  display: inline-block;
+}
+
+.share-bubble{
+  display: none;
+  position: absolute;
+  bottom: 150%; 
+  left: 50%;        
+  transform: translateX(-50%); 
+  background-color: hsl(217, 19%, 35%);
+  padding: 18px 30px;
+  border-radius: 10px;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  
+  .card {
+    flex-direction: row;
+    max-width: 700px;
+  }
+  
+  .imgx {   
+    height: 250px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .share-bubble.active {
+    display: flex;
+  }
+
+  .share-bubble span {
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 4px;
+    font-size: 12px;
+  }
+
+  .arrow-down {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+  }
+
+}
+
