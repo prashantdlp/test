@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #c5e4e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  gap: 20px;
+}
+
+.left, .right {
+  width: 250px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.tips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tip-btn {
+  padding: 10px;
+  background: #00494d;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tip-btn.active {
+  background: #26c0ab;
+}
+
+.right {
+  background: #00494d;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  color: #26c0ab;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #26c0ab;
+  cursor: pointer;
+  border-radius: 5px;
+}
